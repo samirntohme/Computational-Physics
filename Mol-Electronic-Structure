@@ -1,0 +1,805 @@
+***,TiN
+memory,1000000000;
+Gprint,basis;     !Print basis information
+Gprint,orbital;   !Print orbitals in SCF and MCSCF
+
+!geometry=xyz
+geometry={ANGSTROM;
+2! number of atoms
+GeomXYZ
+Ti, 0.0, 0.0, 0.0
+N, 0.0, 0.0, 1.582
+}
+
+
+basis={
+
+! titanium             (12s,9p,4d) -> [5s,4p,3d]
+s, TI , 2335.020000000, 353.044100000, 99.573870000, 77.058450000, 21.546710000, 6.413965000, 6.238279000, 1.996108000, 0.646490000, 0.573285000, 0.073119000, 0.026538000
+c, 1.4, 0.06421700, 0.37841200, 0.00000000, 0.67968100
+c, 3.6, -0.10947200, 0.00000000, 0.10194300, 0.95462200
+c, 7.9, -0.28613700, 0.32182800, 0.85955100
+c, 10.11, -0.24245000, 1.10007500
+c, 12.12, 1.00000000
+p, TI , 99.573870000, 21.546710000, 6.413965000, 6.238279000, 1.996108000, 0.646490000, 0.573285000, 0.073119000, 0.026538000
+c, 1.3, 0.13729700, 0.54587500, 0.48906800
+c, 4.6, 0.01923700, 0.44044200, 0.63562000
+c, 7.8, 0.00029200, 0.99990700
+c, 9.9, 1.00000000
+d, TI , 7.083666000, 1.709634000, 0.414123000, 0.100130000
+c, 1.2, 0.26292100, 0.85577200
+c, 3.3, 1.00000000
+c, 4.4, 1.00000000
+!
+
+
+ecp,Ti,10,4,3;
+!Ti ECP ECP10MDF1 : 10 4 3 77
+!Q=12.  MEFIT  MCDHF+Breit+shift, from Dolg 9/28/04
+1; 2,     1.00000000000000,     0.00000000000000;
+2; 2,    12.68545278327510,   130.80332818219401; 2,     5.60443403028738,    20.28841794549380;
+4; 2,    12.16470843145440,    32.17007242591840; 2,    11.83573845353970,    54.94536681653020;
+  2,     4.20933536504579,     2.08550079252638; 2,     4.87027289311104,     6.50179581409069;
+4; 2,    16.69258854674990,    -9.43456596695940; 2,    17.44887629757160,   -15.01358236125450;
+  2,     4.87042604412202,     0.06111200391995; 2,     4.88118144645471,     0.05753055973493;
+2; 2,     8.70406407124751,    -1.96536087719181; 2,    10.12717654527650,    -3.75480071683613;
+4; 2,    12.16470843145440,   -64.34014485183680; 2,    11.83573845353970,    54.94536681653020;
+  2,     4.20933536504579,    -4.17100158505275; 2,     4.87027289311104,     6.50179581409069;
+4; 2,    16.69258854674990,     9.43456596695940; 2,    17.44887629757160,   -10.00905490750300;
+  2,     4.87042604412202,    -0.06111200391995; 2,     4.88118144645471,     0.03835370648996;
+2; 2,     8.70406407124751,     1.31024058479454; 2,    10.12717654527650,    -1.87740035841806;
+
+
+
+! nitrogen             (15s,13p,12d,10f,7g,5h,2i) -> [15s,13p,12d,10f,7g,5h,2i]
+s, N , 1521.1700000, 330.81400000, 139.2730000, 72.692500000, 36.1708000, 18.515300000, 11.6978000, 8.5691000000, 3.8096600000, 2.2483400000, 1.3124100000, 0.75863700000, 0.37887900000, 0.17588800000, 0.0850000
+c, 1.1, 1.0000000
+c, 2.2, 1.0000000000
+c, 3.3, 1.0000000
+c, 4.4, 1.0000000000
+c, 5.5, 1.0000000
+c, 6.6, 1.0000000000
+c, 7.7, 1.0000000
+c, 8.8, 1.0000000000
+c, 9.9, 1.0000000000
+c, 10.10, 1.0000000000
+c, 11.11, 1.0000000000
+c, 12.12, 1.0000000000
+c, 13.13, 1.0000000000
+c, 14.14, 1.0000000000
+c, 15.15, 1.0000000
+p, N , 189.3310000, 66.987000000, 39.5540000, 18.749800000, 11.8663000, 7.4806400000, 4.9393700, 3.7612400000, 2.0756100000, 0.99065200000, 0.51942900000, 0.31199100000, 0.1100000
+c, 1.1, 1.0000000
+c, 2.2, 1.0000000000
+c, 3.3, 1.0000000
+c, 4.4, 1.0000000000
+c, 5.5, 1.0000000
+c, 6.6, 1.0000000000
+c, 7.7, 1.0000000
+c, 8.8, 1.0000000000
+c, 9.9, 1.0000000000
+c, 10.10, 1.0000000000
+c, 11.11, 1.0000000000
+c, 12.12, 1.0000000000
+c, 13.13, 1.0000000
+d, N , 118.1910000, 58.6181000, 33.0482000, 17.120900000, 10.9189000, 5.8105200000, 3.5506300000, 2.2621800000, 1.1053700000, 0.56858000000, 0.28193800000, 0.1100000
+c, 1.1, 1.0000000
+c, 2.2, 1.0000000
+c, 3.3, 1.0000000
+c, 4.4, 1.0000000000
+c, 5.5, 1.0000000
+c, 6.6, 1.0000000000
+c, 7.7, 1.0000000000
+c, 8.8, 1.0000000000
+c, 9.9, 1.0000000000
+c, 10.10, 1.0000000000
+c, 11.11, 1.0000000000
+c, 12.12, 1.0000000
+f, N , 61.9341000, 34.2568000, 17.1153000, 10.195600000, 4.6114900000, 2.8184600000, 1.5443300000, 0.89507500000, 0.47044000000, 0.2000000
+c, 1.1, 1.0000000
+c, 2.2, 1.0000000
+c, 3.3, 1.0000000
+c, 4.4, 1.0000000000
+c, 5.5, 1.0000000000
+c, 6.6, 1.0000000000
+c, 7.7, 1.0000000000
+c, 8.8, 1.0000000000
+c, 9.9, 1.0000000000
+c, 10.10, 1.0000000
+g, N , 26.5071000, 12.6099000, 5.4789200000, 3.0534700000, 1.4827700000, 0.84487500000, 0.3473910
+c, 1.1, 1.0000000
+c, 2.2, 1.0000000
+c, 3.3, 1.0000000000
+c, 4.4, 1.0000000000
+c, 5.5, 1.0000000000
+c, 6.6, 1.0000000000
+c, 7.7, 1.0000000
+h, N , 13.0250000, 3.9045700000, 2.2940200000, 1.3193000000, 0.6493390
+c, 1.1, 1.0000000
+c, 2.2, 1.0000000000
+c, 3.3, 1.0000000000
+c, 4.4, 1.0000000000
+c, 5.5, 1.0000000
+i, N , 2.4870900000, 1.1088600
+c, 1.1, 1.0000000000
+c, 2.2, 1.0000000
+!
+}
+
+
+!-----------------------------------------------------
+!              Hartree-Fock Calculations
+!-----------------------------------------------------
+
+{rhf;                         
+wf,19,1,1;
+orbprint,3000;
+}
+
+!-----------------------------------------------------
+!                       CASSCF 
+!-----------------------------------------------------
+
+!thresh,pspace=2;          !Put this statement for Sextet calculations with 7 valence electrons
+multi;                       
+occ,8,3,3,1;
+closed,3,1,1,0;
+
+!Doublet States
+           
+!wf,19,1,1;state,2;        !1Delta and 1sigma States
+!wf,19,2,1;state,2;        !1pi and 1phi States  
+!wf,19,3,1;state,2;        !1pi and 1phi States    
+!wf,19,4,1;state,1;        !1Delta   
+
+!Quartet States
+           
+!wf,19,1,3;state,2;        !1Delta and 1sigma States
+!wf,19,2,3;state,2;        !1pi and 1phi States  
+!wf,19,3,3;state,2;        !1pi and 1phi States   
+!wf,19,4,3;state,1;        !1Delta             
+
+!Sextet States
+           
+wf,19,1,5;state,2;        !1Delta and 1sigma States
+wf,19,2,5;state,2;        !1pi and 1phi States  
+wf,19,3,5;state,2;        !1pi and 1phi States   
+wf,19,4,5;state,1;        !1Delta
+
+!-----------------------------------------------------
+!    Specifying internuclear distance points
+!-----------------------------------------------------
+
+NatOrb;
+Orbital,7100.2;
+ 
+r0 = 1.582
+step = 0.02
+ 
+do i=1,1
+
+r = r0 + (i-1)*step
+ 
+dist(i) = r
+ 
+!geomtyp=xyz
+geometry={ANGSTROM;
+2! number of atoms
+GeomXYZ
+Ti, 0.0,  0.0,  0.0
+N, 0.0,  0.0,  r
+}
+
+!-----------------------------------------------------
+!                       CASSCF 
+!-----------------------------------------------------
+
+!thresh,pspace=2;          !Put this statement for Sextet calculations with 7 valence electrons
+multi;                       
+occ,8,3,3,1;
+closed,3,1,1,0;
+
+!Doublet States
+           
+!wf,19,1,1;state,2;        !1Delta and 1sigma States
+!wf,19,2,1;state,2;        !1pi and 1phi States  
+!wf,19,3,1;state,2;        !1pi and 1phi States    
+!wf,19,4,1;state,1;        !1Delta   
+
+!Quartet States
+           
+!wf,19,1,3;state,2;        !1Delta and 1sigma States
+!wf,19,2,3;state,2;        !1pi and 1phi States  
+!wf,19,3,3;state,2;        !1pi and 1phi States   
+!wf,19,4,3;state,1;        !1Delta             
+
+!Sextet States
+           
+wf,19,1,5;state,2;        !1Delta and 1sigma States
+wf,19,2,5;state,2;        !1pi and 1phi States  
+wf,19,3,5;state,2;        !1pi and 1phi States   
+wf,19,4,5;state,1;        !1Delta
+
+!------------------------------------------------------------------------
+!  Calculate expectation values of matrix elements for Lx^2, Ly^2, Lz^2
+!------------------------------------------------------------------------
+ 
+TRAN2,LXX,LYY,LZZ;
+ 
+!Doublet states
+
+!D_Lz_1_1(i)= sqrt(abs(LZLZ(1)))
+!D_Lz_1_2(i)= sqrt(abs(LZLZ(2)))
+
+!D_Lz_2_1(i)= sqrt(abs(LZLZ(3)))
+!D_Lz_2_2(i)= sqrt(abs(LZLZ(4)))
+
+!D_Lz_3_1(i)= sqrt(abs(LZLZ(5)))
+!D_Lz_3_2(i)= sqrt(abs(LZLZ(6)))
+
+!D_Lz_4_1(i)= sqrt(abs(LZLZ(7)))
+
+!Quartet states
+
+!Q_Lz_1_1(i)= sqrt(abs(LZLZ(8)))
+!Q_Lz_1_2(i)= sqrt(abs(LZLZ(9)))
+
+!Q_Lz_2_1(i)= sqrt(abs(LZLZ(10)))
+!Q_Lz_2_2(i)= sqrt(abs(LZLZ(11)))
+
+!Q_Lz_3_1(i)= sqrt(abs(LZLZ(12)))
+!Q_Lz_3_2(i)= sqrt(abs(LZLZ(13)))
+
+!Q_Lz_4_1(i)= sqrt(abs(LZLZ(14)))
+
+!Sextet states
+
+S_Lz_1_1(i)= sqrt(abs(LZLZ(15)))
+S_Lz_1_2(i)= sqrt(abs(LZLZ(16)))
+
+S_Lz_2_1(i)= sqrt(abs(LZLZ(17)))
+S_Lz_2_2(i)= sqrt(abs(LZLZ(18)))
+
+S_Lz_3_1(i)= sqrt(abs(LZLZ(19)))
+S_Lz_3_2(i)= sqrt(abs(LZLZ(20)))
+
+S_Lz_4_1(i)= sqrt(abs(LZLZ(21)))
+ 
+!-----------------------------------------------------
+!                    CI calculations
+!-----------------------------------------------------
+ 
+!*************  CI - Doublet  *************
+
+ci,NOCHECK;
+maxiter,100,1000;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,1,1;state,2;
+
+D_e_sym1_1(i)= energd(1)
+D_e_sym1_2(i)= energd(2)
+ 
+D_e_SO_sym1_1=D_e_sym1_1(i)
+D_e_SO_sym1_2=D_e_sym1_2(i)
+
+D_d_sym1_1(i)= DMZ(1)
+D_d_sym1_2(i)= DMZ(2)
+
+table,dist,D_Lz_1_1,D_e_sym1_1,D_d_sym1_1
+DIGITS,,8
+table,dist,D_Lz_1_2,D_e_sym1_2,D_d_sym1_2
+DIGITS,,8
+
+
+ci,NOCHECK;
+maxiter,100,1000;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,2,1;state,2;
+
+D_e_sym2_1(i)= energd(1)
+D_e_sym2_2(i)= energd(2)
+ 
+D_e_SO_sym2_1=D_e_sym2_1(i)
+D_e_SO_sym2_2=D_e_sym2_2(i)
+
+D_d_sym2_1(i)= DMZ(1)
+D_d_sym2_2(i)= DMZ(2)
+
+table,dist,D_Lz_2_1,D_e_sym2_1,D_d_sym2_1
+DIGITS,,8
+table,dist,D_Lz_2_2,D_e_sym2_2,D_d_sym2_2
+DIGITS,,8
+
+
+ci,NOCHECK;
+maxiter,100,1000;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,3,1;state,2;
+
+D_e_sym3_1(i)= energd(1)
+D_e_sym3_2(i)= energd(2)
+ 
+D_e_SO_sym3_1=D_e_sym3_1(i)
+D_e_SO_sym3_2=D_e_sym3_2(i)
+
+S_d_sym3_1(i)= DMZ(1)
+S_d_sym3_2(i)= DMZ(2)
+
+table,dist,D_Lz_3_1,D_e_sym3_1,D_d_sym3_1
+DIGITS,,8
+table,dist,D_Lz_3_2,D_e_sym3_2,D_d_sym3_2
+DIGITS,,8
+
+
+ci,NOCHECK;
+maxiter,100,1000;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,4,1;state,1;
+
+D_e_sym4_1(i)= energd(1)
+ 
+ES_D2=D_e_sym4_1(i)
+
+D_e_SO_sym4_1(i)= DMZ(1)
+
+table,dist,D_Lz_4_1,D_e_sym4_1,D_d_sym4_1
+DIGITS,,8
+
+
+!*************  CI - Quartet  *************
+
+ci,NOCHECK;
+maxiter,100,1000;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,1,3;state,2;
+
+Q_e_sym1_1(i)= energd(1)
+Q_e_sym1_2(i)= energd(2)
+ 
+Q_e_SO_sym1_1=Q_e_sym1_1(i)
+Q_e_SO_sym1_2=Q_e_sym1_2(i)
+
+Q_d_sym1_1(i)= DMZ(1)
+Q_d_sym1_2(i)= DMZ(2)
+
+table,dist,Q_Lz_1_1,Q_e_sym1_1,Q_d_sym1_1
+DIGITS,,8
+table,dist,Q_Lz_1_2,Q_e_sym1_2,Q_d_sym1_2
+DIGITS,,8
+
+
+ci,NOCHECK;
+maxiter,100,1000;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,2,3;state,2;
+
+Q_e_sym2_1(i)= energd(1)
+Q_e_sym2_2(i)= energd(2)
+
+Q_e_SO_sym2_1=Q_e_sym2_1(i)
+Q_e_SO_sym2_2=Q_e_sym2_2(i)
+
+Q_d_sym2_1(i)= DMZ(1)
+Q_d_sym2_2(i)= DMZ(2)
+
+table,dist,Q_Lz_2_1,Q_e_sym2_1,Q_d_sym2_1
+DIGITS,,8
+table,dist,Q_Lz_2_2,Q_e_sym2_2,Q_d_sym2_2
+DIGITS,,8
+
+
+ci,NOCHECK;
+maxiter,100,1000;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,3,3;state,2;
+
+Q_e_sym3_1(i)= energd(1)
+Q_e_sym3_2(i)= energd(2)
+
+Q_e_SO_sym3_1=Q_e_sym3_1(i)
+Q_e_SO_sym3_2=Q_e_sym3_2(i)
+
+Q_d_sym3_1(i)= DMZ(1)
+Q_d_sym3_2(i)= DMZ(2)
+
+table,dist,Q_Lz_3_1,Q_e_sym3_1,Q_d_sym3_1
+DIGITS,,8
+table,dist,Q_Lz_3_2,Q_e_sym3_2,Q_d_sym3_2
+DIGITS,,8
+
+
+ci,NOCHECK;
+maxiter,100,1000;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,4,3;state,1;
+
+Q_e_sym4_1(i)= energd(1)
+
+Q_e_SO_sym4_1=Q_e_sym4_1(i)
+
+Q_d_sym4_1(i)= DMZ(1)
+
+table,dist,Q_Lz_4_1,Q_e_sym4_1,Q_d_sym4_1
+DIGITS,,8
+
+
+!*************  CI - Sextet  *************
+
+ci,NOCHECK;
+maxiter,100,1000;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,1,5;state,2;
+
+S_e_sym1_1(i)= energd(1)
+S_e_sym1_2(i)= energd(2)
+
+S_e_SO_sym1_1=S_e_sym1_1(i)
+S_e_SO_sym1_2=S_e_sym1_2(i)
+
+S_d_sym1_1(i)= DMZ(1)
+S_d_sym1_2(i)= DMZ(2)
+
+table,dist,S_Lz_1_1,S_e_sym1_1,S_d_sym1_1
+DIGITS,,8
+table,dist,S_Lz_1_2,S_e_sym1_2,S_d_sym1_2
+DIGITS,,8
+
+
+ci,NOCHECK;
+maxiter,100,1000;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,2,5;state,2;
+
+S_e_sym2_1(i)= energd(1)
+S_e_sym2_2(i)= energd(2)
+
+S_e_SO_sym2_1=S_e_sym2_1(i)
+S_e_SO_sym2_2=S_e_sym2_2(i)
+
+S_d_sym2_1(i)= DMZ(1)
+S_d_sym2_2(i)= DMZ(2)
+
+table,dist,S_Lz_2_1,S_e_sym2_1,S_d_sym2_1
+DIGITS,,8
+table,dist,S_Lz_2_2,S_e_sym2_2,S_d_sym2_2
+DIGITS,,8
+
+
+ci,NOCHECK;
+maxiter,100,1000;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,3,5;state,2;
+
+S_e_sym3_1(i)= energd(1)
+S_e_sym3_2(i)= energd(2)
+
+S_e_SO_sym3_1=S_e_sym3_1(i)
+S_e_SO_sym3_2=S_e_sym3_2(i)
+
+S_d_sym3_1(i)= DMZ(1)
+S_d_sym3_2(i)= DMZ(2)
+
+table,dist,S_Lz_3_1,S_e_sym3_1,S_d_sym3_1
+DIGITS,,8
+table,dist,S_Lz_3_2,S_e_sym3_2,S_d_sym3_2
+DIGITS,,8
+
+
+ci,NOCHECK;
+maxiter,100,1000;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,4,5;state,1;
+
+S_e_sym4_1(i)= energd(1)
+
+S_e_SO_sym4_1=S_e_sym4_1(i)
+
+S_d_sym4_1(i)= DMZ(1)
+
+table,dist,S_Lz_4_1,S_e_sym4_1,S_d_sym4_1
+DIGITS,,8
+
+!-----------------------------------------------------
+!            CI - Spin-Orbit  Calculations
+!-----------------------------------------------------
+
+! Doublet States	
+
+ci,NOCHECK;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,1,1;state,2;noexc;save,5100.2;
+
+ci,NOCHECK;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,2,1;state,2;noexc;save,5200.2;
+
+ci,NOCHECK;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,3,1;state,2;noexc;save,5300.2;
+
+ci,NOCHECK;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,4,1;state,1;noexc;save,5400.2;
+
+! Quartet States	
+
+ci,NOCHECK;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,1,3;state,2;noexc;save,6100.2;
+
+ci,NOCHECK;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,2,3;state,2;noexc;save,6200.2;
+
+ci,NOCHECK;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,3,3;state,2;noexc;save,6300.2;
+
+ci,NOCHECK;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,4,3;state,1;noexc;save,6400.2;
+
+! Sextet States	
+
+ci,NOCHECK;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,1,5;state,2;noexc;save,5100.2;
+
+ci,NOCHECK;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,2,5;state,2;noexc;save,5200.2;
+
+ci,NOCHECK;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,3,5;state,2;noexc;save,5300.2;
+
+ci,NOCHECK;
+occ,8,3,3,1;
+closed,3,1,1,0;
+core,3,1,1,0;
+wf,19,4,5;state,1;noexc;save,5400.2;
+
+hlsdiag=[S_e_SO_sym1_1,S_e_SO_sym1_2,S_e_SO_sym2_1,S_e_SO_sym2_2,S_e_SO_sym3_1,D_e_SO_sym3_2,S_e_SO_sym4_1]
+ci;options,hlstrans=0;print,HLS=1,VLS=1;hlsmat,ecp,5100.2,5200.2,5300.2,5400.2;
+ 
+text, Final Table Results for Spin-Orbit Calculations
+
+eso_1(i) = energy(1)
+eso_2(i) = energy(2)
+eso_3(i) = energy(3)
+eso_4(i) = energy(4)
+eso_5(i) = energy(5)
+eso_6(i) = energy(6)
+eso_7(i) = energy(7)
+eso_8(i) = energy(8)
+eso_9(i) = energy(9)
+eso_10(i) = energy(10)
+eso_11(i) = energy(11)
+eso_12(i) = energy(12)
+eso_13(i) = energy(13)
+eso_14(i) = energy(14)
+eso_15(i) = energy(15)
+eso_16(i) = energy(16)
+eso_17(i) = energy(17)
+eso_18(i) = energy(18)
+eso_19(i) = energy(19)
+eso_20(i) = energy(20)
+eso_21(i) = energy(21)
+eso_22(i) = energy(22)
+eso_23(i) = energy(23)
+eso_24(i) = energy(24)
+eso_25(i) = energy(25)
+eso_26(i) = energy(26)
+eso_27(i) = energy(27)
+eso_28(i) = energy(28)
+eso_29(i) = energy(29)
+eso_30(i) = energy(30)
+eso_31(i) = energy(31)
+eso_32(i) = energy(32)
+eso_33(i) = energy(33)
+ 
+dso_1(i) = DMZ(1)
+dso_2(i) = DMZ(2)
+dso_3(i) = DMZ(3)
+dso_4(i) = DMZ(4)
+dso_5(i) = DMZ(5)
+dso_6(i) = DMZ(6)
+dso_7(i) = DMZ(7)
+dso_8(i) = DMZ(8)
+dso_9(i) = DMZ(9)
+dso_10(i) = DMZ(10)
+dso_11(i) = DMZ(11)
+dso_12(i) = DMZ(12)
+dso_13(i) = DMZ(13)
+dso_14(i) = DMZ(14)
+dso_15(i) = DMZ(15)
+dso_16(i) = DMZ(16)
+dso_17(i) = DMZ(17)
+dso_18(i) = DMZ(18)
+dso_19(i) = DMZ(19)
+dso_20(i) = DMZ(20)
+dso_21(i) = DMZ(21)
+dso_22(i) = DMZ(22)
+dso_23(i) = DMZ(23)
+dso_24(i) = DMZ(24)
+dso_25(i) = DMZ(25)
+dso_26(i) = DMZ(26)
+dso_27(i) = DMZ(27)
+dso_28(i) = DMZ(28)
+dso_29(i) = DMZ(29)
+dso_30(i) = DMZ(30)
+dso_31(i) = DMZ(31)
+dso_32(i) = DMZ(32)
+dso_33(i) = DMZ(33)
+
+ 
+table,dist,eso_1,dso_1
+DIGITS,,8
+table,dist,eso_2,dso_2
+DIGITS,,8
+table,dist,eso_3,dso_3
+DIGITS,,8
+table,dist,eso_4,dso_4
+DIGITS,,8
+table,dist,eso_5,dso_5
+DIGITS,,8
+table,dist,eso_6,dso_6
+DIGITS,,8
+table,dist,eso_7,dso_7
+DIGITS,,8
+table,dist,eso_8,dso_8
+DIGITS,,8
+table,dist,eso_9,dso_9
+DIGITS,,8
+table,dist,eso_10,dso_10
+DIGITS,,8
+table,dist,eso_11,dso_11
+DIGITS,,8
+table,dist,eso_12,dso_12
+DIGITS,,8
+table,dist,eso_13,dso_13
+DIGITS,,8
+table,dist,eso_14,dso_14
+DIGITS,,8
+table,dist,eso_15,dso_15
+DIGITS,,8
+table,dist,eso_16,dso_16
+DIGITS,,8
+table,dist,eso_17,dso_17
+DIGITS,,8
+table,dist,eso_18,dso_18
+DIGITS,,8
+table,dist,eso_19,dso_19
+DIGITS,,8
+table,dist,eso_20,dso_20
+DIGITS,,8
+table,dist,eso_21,dso_21
+DIGITS,,8
+table,dist,eso_22,dso_22
+DIGITS,,8
+table,dist,eso_23,dso_23
+DIGITS,,8
+table,dist,eso_24,dso_24
+DIGITS,,8
+table,dist,eso_25,dso_25
+DIGITS,,8
+table,dist,eso_26,dso_26
+DIGITS,,8
+table,dist,eso_27,dso_27
+DIGITS,,8
+table,dist,eso_28,dso_28
+DIGITS,,8
+table,dist,eso_29,dso_29
+DIGITS,,8
+table,dist,eso_30,dso_30
+DIGITS,,8
+table,dist,eso_31,dso_31
+DIGITS,,8
+table,dist,eso_32,dso_32
+DIGITS,,8
+table,dist,eso_33,dso_33
+DIGITS,,8
+
+enddo
+
+text, Final Table Results for Spin-Free Calculations
+
+table,dist,D_Lz_1_1,D_e_sym1_1,D_d_sym1_1
+DIGITS,,8
+table,dist,D_Lz_1_2,D_e_sym1_2,D_d_sym1_2
+DIGITS,,8
+
+table,dist,D_Lz_2_1,D_e_sym2_1,D_d_sym2_1
+DIGITS,,8
+table,dist,D_Lz_2_2,D_e_sym2_2,D_d_sym2_2
+DIGITS,,8
+
+table,dist,D_Lz_3_1,D_e_sym3_1,D_d_sym3_1
+DIGITS,,8
+table,dist,D_Lz_3_2,D_e_sym3_2,D_d_sym3_2
+DIGITS,,8
+
+table,dist,D_Lz_4_1,D_e_sym4_1,D_d_sym4_1
+DIGITS,,8
+
+table,dist,Q_Lz_1_1,Q_e_sym1_1,Q_d_sym1_1
+DIGITS,,8
+table,dist,Q_Lz_1_2,Q_e_sym1_2,Q_d_sym1_2
+DIGITS,,8
+
+table,dist,Q_Lz_2_1,Q_e_sym2_1,Q_d_sym2_1
+DIGITS,,8
+table,dist,Q_Lz_2_2,Q_e_sym2_2,Q_d_sym2_2
+DIGITS,,8
+
+table,dist,Q_Lz_3_1,Q_e_sym3_1,Q_d_sym3_1
+DIGITS,,8
+table,dist,Q_Lz_3_2,Q_e_sym3_2,Q_d_sym3_2
+DIGITS,,8
+
+table,dist,Q_Lz_4_1,Q_e_sym4_1,Q_d_sym4_1
+DIGITS,,8
+
+table,dist,S_Lz_1_1,S_e_sym1_1,S_d_sym1_1
+DIGITS,,8
+table,dist,S_Lz_1_2,S_e_sym1_2,S_d_sym1_2
+DIGITS,,8
+
+table,dist,S_Lz_2_1,S_e_sym2_1,S_d_sym2_1
+DIGITS,,8
+table,dist,S_Lz_2_2,S_e_sym2_2,S_d_sym2_2
+DIGITS,,8
+
+table,dist,S_Lz_3_1,S_e_sym3_1,S_d_sym3_1
+DIGITS,,8
+table,dist,S_Lz_3_2,S_e_sym3_2,S_d_sym3_2
+DIGITS,,8
+
+table,dist,S_Lz_4_1,S_e_sym4_1,S_d_sym4_1
+DIGITS,,8
