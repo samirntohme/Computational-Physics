@@ -1,4 +1,11 @@
-***,TiN
+! ==============================================================================================================
+! Program Title: TiN Electronic Structure Calculations
+! Author: Dr. Samir Tohme
+! Last Modified: February 23, 2023
+! Description: This program performs electronic structure calculations for Titanium Nitride (TiN) using MOLPRO. 
+! It defines the geometry, basis set, and effective core potentials (ECP) for Titanium (Ti) and Nitrogen (N), 
+! and sets up Hartree-Fock and CASSCF calculations for obtaining electronic wavefunctions and energies.
+! ==============================================================================================================
 memory,1000000000;
 Gprint,basis;     !Print basis information
 Gprint,orbital;   !Print orbitals in SCF and MCSCF
