@@ -28,12 +28,9 @@ To execute this script, you need:
 
 ## Interpretation of Results
 - The **SCF and MCSCF orbital information** will provide insight into the electronic structure.
-- **Total energy values** indicate the stability of the molecule.
+- **Total energy values** indicate the energy of the molecule at particular internuclear distance.
 - **Dipole moments and transition dipole moments** can be extracted for spectroscopic analysis.
 
 ## Contact & Contribution
-For any issues or improvements, please submit a pull request or contact the repository maintainer.
-
----
-This repository serves as a reference for computational chemistry studies on TiN and can be adapted for similar transition metal-containing systems.
+If you have any questions, suggestions, or improvements, feel free to open an issue or submit a pull request. You can also reach out to me directly.
 
