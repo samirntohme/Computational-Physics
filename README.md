@@ -20,7 +20,7 @@ To execute this script, you need:
 ## Running the Calculation
 1. **Ensure MOLPRO is installed** and accessible from your command line.
 2. **Save the script** as `TiN.inp`.
-3. **Run the calculation** using:
+3. **Run the calculation** from the Linux Command Line Terminal using:
    ```sh
    molpro TiN.inp > TiN.out
    ```
