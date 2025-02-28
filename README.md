@@ -1,4 +1,4 @@
-# TiN Molecular Calculation with MOLPRO
+# Molecular Calculation from the First Principles (Ab Initio) with MOLPRO
 
 ## Overview
 This repository contains a MOLPRO input script for quantum chemical calculations of the titanium nitride (TiN) molecule. The script is designed to compute electronic structure properties using multi-configurational self-consistent field (MCSCF) and configuration interaction (CI) methods, among others.
