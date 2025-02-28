@@ -14,7 +14,7 @@ This repository contains a MOLPRO input script for quantum chemical calculations
 
 ## Dependencies
 To execute this script, you need:
-- **MOLPRO Quantum Chemistry Software** (latest version recommended)
+- **MOLPRO Quantum Chemistry Software**
 - Adequate computational resources (recommended: at least 16 GB RAM and multiple CPU cores)
 
 ## Running the Calculation
